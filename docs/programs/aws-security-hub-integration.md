@@ -8,7 +8,7 @@ id: "programs/aws-security-hub-integration"
 
 The AWS Security Hub integration exchanges vulnerability findings between HackerOne and Security Hub, streamlining workflows to accelerate security actions. By consolidating and routing vulnerability intelligence from HackerOne to AWS Security Hub, the integration delivers greater visibility into crucial gaps that could lead to a cyberattack.
 
-AWS customers can sync all HackerOne vulnerability findings and use AWS Security Hub as the single console for management and prioritization. They can also compare AWS Security Hub findings with those found by the HackerOne community to see duplicates, understand status, and plan remediation, as shown in Figure 2 below.
+AWS customers can sync all HackerOne vulnerability findings and use AWS Security Hub as the single console for management and prioritization. They can also compare AWS Security Hub findings with those found by the HackerOne community to see duplicates, understand status, and plan remediation.
 
 With consolidated vulnerability reports, unified findings for more informed responses, and faster time to remediation, AWS customers can improve application security. HackerOne’s AWS Security Hub integration means severe vulnerabilities are routed to the right people at the right time to increase security team efficiencies, improve reporting, and reduce application exploitation. 
 
@@ -16,9 +16,11 @@ With consolidated vulnerability reports, unified findings for more informed resp
 
 - An AWS account with [AWS Security Hub](https://aws.amazon.com/security-hub/) enabled for the region with your workload. (If you are using AWS Organizations and consolidating findings from Security Hub in various regions and accounts, choose the region and account with the desired level of visibility.)
 - The AWS CLI configured to deploy a serverless application to the same region where AWS Security Hub is enabled. If not, use the following steps:
+	
 	1. Install [the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
     	1. Retrieve the AWS Access Key ID and the AWS Secret Access Key for an identity that has permission to create an API Gateway, Lambda, and a new IAM Role for the Lambda to connect to Security Hub.
     	1. Use `aws configure` to set the credentials and the region where you have Security Hub enabled.
+
 - A HackerOne program account with the ability to configure [Webhooks](https://docs.hackerone.com/programs/webhooks.html) to send reports and the ability to generate [API tokens](https://docs.hackerone.com/programs/api-tokens.html) to receive reports.
 
 ## HackerOne to Security Hub
